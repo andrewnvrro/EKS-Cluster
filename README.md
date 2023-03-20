@@ -21,11 +21,11 @@ Creation of module to spin up an EKS cluster in AWS
 _This is the output after using terraform apply:_ 
 It shows the cluster endpoint, cluster name, cluster SG ID and the region in where the cluster is deployed.  
 
-To setup your kubectl, you should first have your AWS CLI. If you already have that, you can now proceed with the kubectl. To install kubectl in aws, use this command: 
+To setup your kubectl, you should first have your AWS CLI. If you already have that, you can now proceed with the kubectl. To install and configure kubectl in aws, use this command: 
 
     aws eks –region <region> update-kubeconfig \ --name <eks-cluster-name> 
 
-To identify which is the leader amongst the nodes (it will also show you the nodes of your eks cluster), use the command: 
+To identify which is the leader amongst the nodes _(it will also show you the nodes of your eks cluster)_, use the command: 
 
     kubectl get nodes 
 
