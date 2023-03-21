@@ -11,6 +11,7 @@ Creation of module to spin up an EKS cluster in AWS
     Kubectl 
 
 **Main.tf** - This contains the main terraform configuration file. It contains the provider block and the cluster_name that would show up on the management console. It also has the module _“vpc”_ in which it creates the VPC for the network using the source code from terraform-aws-modules/vpc/aws then you just have to input the necessary arguments like the cidr, availability zones, private and public subnets and etc. In this file,it will also create the eks cluster and the nodes. You just have to specify the instance type, minimum, maximum and desired count of the instances. 
+
 ***Enable_nat_gateway*** – make this true if you want your private subnets to access the internet using
 NAT gateway
 
